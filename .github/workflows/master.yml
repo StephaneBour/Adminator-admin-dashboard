@@ -16,3 +16,10 @@ jobs:
           node-version: '14'
       - run: npm install
       - run: npm run build
+
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: dist-file
+          path: |
+            dist
